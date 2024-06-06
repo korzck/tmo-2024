@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>НИРС</title>
+</head>
+<body>
+    <form method="post" action="/submit">
+        <p>min_samples_split<input type="text" name="min_samples_split" placeholder="2, 5, 10"></p>
+        <p>max_depth<input type="text" name="max_depth" placeholder="None, 10, 20, 30"></p>
+        <p>min_samples_leaf<input type="text" name="min_samples_leaf" placeholder="1, 2, 4"></p>
+        <button type="submit">Отправить</button>
+    </form>
+    <!-- <button>{{ button_text }}</button> -->
+    {% for a in l %}
+        <p>{{ loop.revindex }}) ROC AUC {{ a }}</p>
+        <br />
+    {% endfor %}
+    <!-- <p>ROC AUC {{ roc }}</p> -->
+</body>
+</html>
